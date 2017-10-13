@@ -12,6 +12,8 @@ def main():
     #read the data from the URL and print it
     data = webUrl.read()
     print data
+
+
 if __name__ == '__main__':
     main()
 
