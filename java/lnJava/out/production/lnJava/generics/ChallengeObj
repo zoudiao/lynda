@@ -1,0 +1,5 @@
+Create a generic method
+Pass a generic ArrayList to the method, which eliminates duplicates
+Return the ArrayList without duplicates
+
+Type and Element not clear
