@@ -1,0 +1,55 @@
+Every java program has a default main thread
+Athread is an independent path of code execution
+Many threads can run concurrently in a Java program
+Threads can be used to perform time-intensive tasks
+
+Runnables are objects that encapsulate code sequences
+Each thread executes a runnable object
+Threads can initiate an asynchronous task
+Asynchronous indicates that it can run concurrently
+
+The JVM gives each thread its own private JVM stack
+This prevents threads from interfering with each other
+The stack holds local variables
+It also tracks next instructions and calls methods
+
+Java supports threads through java.lang.Thread class and the java.lang.Runnable interface
+Threads are either daemon or non-daemon
+Daemon threads don't stop the JVM from ending
+Threads by default are non-daemon threads
+
+Java garbage collection runs on a daemon thread
+A daemon thread is created calling setDaemon(true)
+Them main thread is a non-daemon thread
+The program ends when non-daemon threads have died
+
+New Thread() [New State] ->start()-> Runnable->run()-> 'Running'->wait()|sleep()->'Waiting'->notify()|elapsed time->'Dead'
+
+How to create a Thread
+There two ways to create a thread
+Declare a new class as a subclass of the Thread class
+Must override the run() method
+An instance of this subclass can be allocated and started
+
+Implement the Runnable interface
+Create a new class that implements Runnable
+Create a Runnable object and use a Thread constructor
+Still must override the run() method
+
+Thread()
+Thread(Runnable obj)
+Thread(Runnable obj, String name)
+Thread(String name)
+
+##Thread State
+Each thread object has a state
+State includes name, alive/dead, execution state, and priority, and a daemon/non-daemon status
+Each attribute has a get/set method associated with it
+
+NEW - created but not started
+Runnable - a thread executing in the JVM
+Blocked - blocked waiting for a monitor to be unlocked
+Waiting - waiting to be notified to continue
+Time_waiting - waiting with a time limit
+Terminated - a thread that has completed execution
+
