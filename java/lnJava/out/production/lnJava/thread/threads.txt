@@ -53,3 +53,18 @@ Waiting - waiting to be notified to continue
 Time_waiting - waiting with a time limit
 Terminated - a thread that has completed execution
 
+##Thread Class
+Useful methods for thread management
+Including static and non-static methods
+Static methods affect the current thread
+Non-static methods operate on the calling thread
+
+##Static Methods
+activeCount() - returns estimated number of threads
+currentThread() - returnes reference to current thread
+enumerate(Thread[] tarr) - list of active threads
+sleep(long millis) - sleep or stop execution
+join() - returns estimated number of threads
+interrupt() - returns reference to current thread
+
+##Multithreaded application problems
