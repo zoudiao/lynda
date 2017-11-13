@@ -68,3 +68,32 @@ join() - returns estimated number of threads
 interrupt() - returns reference to current thread
 
 ##Multithreaded application problems
+Thread interaction can cause problems
+Problems include race conditions, data races, and cached variable problems
+These make an application thread-unsafe
+Threads can increase complexity
+Reliance on synchronization can impact scalability
+A race condition occurs when threads depend on relative timing by the scheduler
+A data race occurs when two or more threads access the same memory location
+
+##Synchronization
+Synchronization can be used to solve race conditions, data races , and cached variable problems
+Prevents two threads from accessing a critical section
+Ensures threads can safely update shared variables
+Can be applied to methods or code blocks
+Synchronized code is know as critical sections
+JVM supports it via monitors
+Every Java object is associated with a monitor
+Before a thread enters a critical section, it must get a lock on the monitor
+If the monitor is already locked, the thread is blocked
+Shared variables are copied into the thread's working memory
+This ensures access to most recent values
+When done, it writes values back to main memory
+
+##Synchronized Methods
+Add keywords synchronized to the method header
+Prevents two threads from accessing same critical code
+
+##Synchroinzed Block
+A synchronized block is identified by a special header
+The header identifies the object for the lock 
